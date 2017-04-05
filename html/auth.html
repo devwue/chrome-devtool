@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+	<meta charset='utf-8'>
+	<title>배달통 문자 인증</title>
+    <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+	<script type="text/javascript" src="../script/gg.js"></script>
+    <script type="text/javascript" src="../script/jquery.min.js"></script>
+    <script type="text/javascript" src="../script/auth.js"></script>
+</head>
+<body>
+	<div class=BDTDevWrapper>
+        <ul id="tabs">
+            <li><a href="developer.html">Server</a></li>
+            <li><a href="auth.html">SMS</a></li>
+        </ul>
+		<div id=search>
+			<label for=myPhone>핸드폰번호:</label>
+			<input type="hidden" name="type" value="">
+			<input type=text name='myPhone' id=myPhone>
+			<label for="db">DB:</label>
+			<select name="db" id="db">
+				<option value="test">test</option>
+				<option value="maria">maria</option>
+			</select>
+			<input type=button value='인증' id=btnSearch >
+			<input type=button value='SMS' id=btnSms >
+		</div>
+		<div id=result></div>
+	</div>
+</body>
+</html>

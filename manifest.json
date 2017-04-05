@@ -1,0 +1,54 @@
+{
+   "name": "Server Switch Tools"
+  ,"description": "Developer Switcher"
+  ,"version" : "0.0.1"
+  ,"manifest_version": 2
+  ,"page_action": {
+     "default_icon": "images/default.png"
+    , "default_title": "Switcher"
+    , "default_popup": "html/developer.html"
+  }
+  ,"icons": 
+  {
+    "24": "images/x.png"
+    ,"128": "images/xx.png"
+    ,"256": "images/xxx.png"
+  }
+  ,"content_scripts": [{
+	"matches": [
+		 "*://*/*"
+	]
+	,"js": [
+        "script/jquery.min.js"
+        ,"script/gg.js"
+        ,"script/auth.js"
+        ,"script/developer.js"
+	]
+	,"css": [
+		"css/global.css"
+	]}
+  ]
+  ,"options_page": "html/options.html"
+  ,"background": {
+	"scripts" : [
+		"script/jquery.min.js"
+        ,"script/gg.js"
+		,"script/background.js"
+	]
+	,"persistent" : true
+  }
+  ,"permissions": [
+	"tabs"
+	,"background"
+	,"<all_urls>"
+	,"webRequest"
+	,"webRequestBlocking"
+    ,"storage"
+    ,"cookies"
+	/*,"declarativeContent" */
+    ,"declarativeContent"
+    ,"http://test.com/*"
+    /*,"proxy"*/
+  ]
+  ,"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self' "
+}

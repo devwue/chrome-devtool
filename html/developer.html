@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>개발자 환경 선택</title>
+  <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+  <script type="text/javascript" src="../script/gg.js"></script>
+  <script type="text/javascript" src="../script/jquery.min.js"></script>
+  <script type="text/javascript" src="../script/developer.js"></script>
+</head>
+<body>
+<div class=BDTDevWrapper>
+  <ul id="tabs">
+      <li><a href="developer.html">Server</a></li>
+      <li><a href="auth.html" >SMS</a></li>
+  </ul>
+  <div id=result>
+      <div id="environment">
+          <fieldset>
+              <legend> 환경설정 </legend>
+              <ul>
+                  <li> <input type="radio" name="envType" id=envDev value="dev"> <label for="envDev">dev/qa</label> </li>
+                  <li> <input type="radio" name="envType" id=envInter value="internal"> <label for="envInter">staging</label> </li>
+                  <li> <input type="radio" name="envType" id=envProd value="production"> <label for="envProd">live</label> </li>
+              </ul>
+          </fieldset>
+      </div><br>
+      <div id="users"></div>
+  </div>
+</div>
+</body>
+</html>
